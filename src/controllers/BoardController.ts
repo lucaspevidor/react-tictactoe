@@ -25,7 +25,7 @@ export interface WinnerPosition {
   side: BoardItem;
 }
 
-type Direction = [number, number];
+export type Direction = [number, number];
 
 export class BoardController {
   public Board: Board;
