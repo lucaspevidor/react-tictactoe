@@ -93,10 +93,6 @@ export class BoardController {
       [1, 1],
       [0, 1],
       [-1, 1],
-      [-1, 0],
-      [-1, -1],
-      [0, -1],
-      [1, -1],
     ];
 
     let res = null;
