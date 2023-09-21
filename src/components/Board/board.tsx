@@ -1,8 +1,12 @@
-import { BoardController, BoardItem } from "../../controllers/BoardController";
+import {
+  BoardController,
+  BoardItem,
+  GameStatus,
+} from "../../controllers/BoardController";
 import { X, Circle } from "lucide-react";
 
 import "./style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BoardTitle from "./BoardTitle/board-title";
 import BoardDescription from "./BoardDescription/board-description";
 
@@ -17,6 +21,32 @@ const Board = () => {
     setBoard({ ...bc.Board });
     setGameStatus(bc.status);
   }
+
+  function playAgainClicked() {
+    const elements = document.getElementsByClassName("boardItem");
+
+    for (let i = 0; i < elements.length; i++) {
+      elements.item(i)?.classList.add("despawn");
+    }
+
+    setTimeout(() => {
+      bc.ClearBoard();
+      setBoard({ ...bc.Board });
+      setGameStatus(bc.status);
+    }, 250);
+  }
+
+  useEffect(() => {
+    if (gameStatus !== GameStatus.X_TURN && gameStatus !== GameStatus.O_TURN) {
+      const elements = document.getElementsByClassName("selectable");
+      console.log("Length", elements.length);
+      for (let i = 0; i < elements.length; i++) {
+        elements.item(i)?.classList.remove("selectable");
+      }
+    }
+
+    console.log("ran");
+  }, [gameStatus]);
 
   return (
     <>
@@ -40,7 +70,10 @@ const Board = () => {
                         <X className="boardItem" size={60} strokeWidth={1} />
                       )
                     ) : (
-                      <div className="selectable"></div>
+                      (gameStatus === GameStatus.O_TURN ||
+                        gameStatus === GameStatus.X_TURN) && (
+                        <div className="selectable"></div>
+                      )
                     )}
                   </button>
                 </td>
@@ -49,7 +82,11 @@ const Board = () => {
           ))}
         </tbody>
       </table>
-      <div>Game status: {gameStatus}</div>
+      {gameStatus !== GameStatus.O_TURN && gameStatus !== GameStatus.X_TURN && (
+        <button className="playAgainBtn" onClick={() => playAgainClicked()}>
+          Play again!
+        </button>
+      )}
     </>
   );
 };

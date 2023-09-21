@@ -55,11 +55,42 @@ button {
   animation: spawn cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards;
 }
 
+.boardItem.despawn {
+  animation: despawn 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+
 @keyframes spawn {
   from {
     transform: scale(0);
   }
   to {
     transform: scale(100%);
+  }
+}
+
+@keyframes despawn {
+  from {
+    transform: scale(100%);
+  }
+  to {
+    transform: scale(0%);
+  }
+}
+
+.playAgainBtn {
+  font-family: "Open Sans", sans-serif;
+  color: #888;
+  font-size: 16px;
+
+  background-color: #eee;
+
+  margin-top: 30px;
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #ddd;
+    cursor: pointer;
   }
 }

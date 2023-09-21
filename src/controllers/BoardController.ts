@@ -82,6 +82,9 @@ export class BoardController {
     this.Board.cells.forEach((col) => {
       col.fill(BoardItem.NONE, 0, col.length);
     });
+
+    this.status = GameStatus.X_TURN;
+    this.winnerPosition = null;
   }
 
   private VerifyBoard() {
