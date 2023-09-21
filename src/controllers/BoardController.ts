@@ -136,13 +136,14 @@ export class BoardController {
     direction: Direction
   ): WinnerPosition | null {
     const side = this.Board.cells[row][col];
+    console.log("rc", row, col);
 
     let newRow = row;
     let newCol = col;
 
     for (let i = 0; i < 3; i++) {
-      newRow = newRow + direction[0];
-      newCol = newCol + direction[1];
+      newCol = newCol + direction[0];
+      newRow = newRow + direction[1];
 
       if (i === 2) return { row, col, direction, side };
 
