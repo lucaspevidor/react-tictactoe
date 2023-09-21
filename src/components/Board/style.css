@@ -49,3 +49,17 @@ button {
 .selectable:hover:after {
   transform: scale(100%);
 }
+
+.boardItem {
+  transform: scale(0);
+  animation: spawn cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards;
+}
+
+@keyframes spawn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
