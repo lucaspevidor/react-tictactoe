@@ -3,6 +3,8 @@ import { X, Circle } from "lucide-react";
 
 import "./style.css";
 import { useState } from "react";
+import BoardTitle from "./BoardTitle/board-title";
+import BoardDescription from "./BoardDescription/board-description";
 
 const bc = new BoardController(3, 3);
 
@@ -18,6 +20,8 @@ const Board = () => {
 
   return (
     <>
+      <BoardTitle />
+      <BoardDescription gameStatus={gameStatus} />
       <table>
         <tbody>
           {board.cells.map((row, rIndex) => (
