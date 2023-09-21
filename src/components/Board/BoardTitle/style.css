@@ -1,8 +1,8 @@
 .titleDiv {
-  background-color: #eee;
+  background-color: var(--bg-primary);
 
   font-size: xx-large;
-  color: #aaa;
+  color: var(--color-primary);
 
   display: flex;
   justify-content: center;

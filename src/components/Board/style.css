@@ -5,15 +5,11 @@ td {
 }
 
 tr:not(:first-child) {
-  border-top: solid 1px #000;
+  border-top: solid 1px var(--color-primary);
 }
 
 td:not(:first-child) {
-  border-left: solid 1px #000;
-}
-
-tr:has(td) {
-  background-color: red;
+  border-left: solid 1px var(--color-primary);
 }
 
 button {
@@ -41,7 +37,7 @@ button {
   position: absolute;
   top: calc(50% - 30%);
   left: calc(50% - 30%);
-  background-color: #eee;
+  background-color: var(--bg-primary);
   border-radius: 100%;
   transform: scale(0);
   transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
@@ -54,6 +50,7 @@ button {
 .boardItem {
   transform: scale(0);
   animation: spawn cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s forwards;
+  color: var(--color-primary);
 }
 
 .boardItem.despawn {
@@ -86,10 +83,10 @@ button {
 
 .playAgainBtn {
   font-family: "Open Sans", sans-serif;
-  color: #888;
+  color: var(--color-primary);
   font-size: 16px;
 
-  background-color: #eee;
+  background-color: var(--bg-primary);
 
   position: absolute;
   width: 150px;
@@ -97,7 +94,7 @@ button {
   border-radius: 10px;
 
   &:hover {
-    background-color: #ddd;
+    background-color: var(--bg-hover-primary);
     cursor: pointer;
   }
 
@@ -122,7 +119,7 @@ button {
   position: absolute;
   top: -150%;
   left: calc(50% - 2px);
-  background-color: red;
+  background-color: var(--accent-color);
   transform: scaleY(0);
   animation: drawVerticalLine ease-in-out 0.5s forwards;
 }
@@ -157,9 +154,9 @@ button {
   width: 300%;
   height: 3px;
   position: absolute;
-  top: calc(50% - 2px);
+  top: calc(50% - 4px);
   left: -150%;
-  background-color: red;
+  background-color: var(--accent-color);
   transform: scaleX(0);
   animation: drawHorizontalLine ease-in-out 0.5s forwards;
 }
@@ -195,7 +192,7 @@ button {
   position: absolute;
   top: calc(-150% - (300% * 1.414213 - 300%) / 2);
   left: -2px;
-  background-color: red;
+  background-color: var(--accent-color);
   transform: rotate(-45deg) scaleY(0.02);
   animation: drawDiagonalRightLine ease-in-out 0.5s forwards;
 }
@@ -236,7 +233,7 @@ button {
   position: absolute;
   top: calc(-150% - (300% * 1.414213 - 300%) / 2);
   left: calc(100% - 4px);
-  background-color: red;
+  background-color: var(--accent-color);
   transform: rotate(45deg) scaleY(0.02);
   animation: drawDiagonalLeftLine ease-in-out 0.5s forwards;
 }

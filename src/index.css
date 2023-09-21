@@ -1,11 +1,18 @@
 :root {
+  --main-bg-primary: #242526;
+  --bg-primary: #303132;
+  --bg-hover-primary: #323334;
+  --title-primary: #aaa;
+  --color-primary: #888;
+  --accent-color: #f26;
+
   font-family: "Open Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242526;
+  color: var(--color-primary);
+  background-color: var(--main-bg-primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,8 +23,15 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: #fff;
-    color: #242526;
+    --main-bg-primary: #fff;
+    --bg-primary: #eee;
+    --bg-hover-primary: #ddd;
+    --title-primary: #aaa;
+    --color-primary: #888;
+    --accent-color: #f26;
+
+    background-color: var(--main-bg-primary);
+    color: var(--color-primary);
   }
 }
 
