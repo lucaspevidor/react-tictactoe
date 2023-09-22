@@ -1,27 +1,56 @@
-# React + TypeScript + Vite
+# React Tic-Tac-Toe Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Tic-Tac-Toe game developed using React, Vite, and TypeScript. It follows the MVC (Model-View-Controller) architecture and features 100% animated elements and dark mode compatibility.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with this project, you can clone it from the GitHub repository:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+git clone https://github.com/lucaspevidor/react-tictactoe.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Prerequisites
+
+Make sure you have Node.js and npm (Node Package Manager) installed on your system.
+
+## Installation
+
+1. Navigate to the project directory:
+
+   ```bash
+   cd react-tictactoe
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+To start the development server:
+
+```bash
+npm run dev
+```
+
+Visit `http://localhost:5173` in your browser to play the game.
+
+## Features
+
+- Play Tic-Tac-Toe with a user-friendly interface.
+- Enjoy smooth animations throughout the game.
+- Toggle between light and dark mode for a personalized experience.
+
+## Contributing
+
+Feel free to contribute to this project by creating issues or pull requests.
+
+## License
+
+This project is open-source and available under the [GPL-V3](LICENSE).
+
+---
+
+Enjoy playing Tic-Tac-Toe with React, and happy coding! If you have any questions or need further assistance, don't hesitate to ask.
