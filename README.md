@@ -2,6 +2,8 @@
 
 This is a simple Tic-Tac-Toe game developed using React, Vite, and TypeScript. It follows the MVC (Model-View-Controller) architecture and features 100% animated elements and dark mode compatibility.
 
+https://github.com/lucaspevidor/react-tictactoe/assets/43662130/7be7327f-3c34-4d94-b17e-42f32764ea3a
+
 ## Getting Started
 
 To get started with this project, you can clone it from the GitHub repository:
